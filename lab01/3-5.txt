@@ -1,0 +1,46 @@
+3.5 What does this program do?
+Do these problems without the use of a computer!
+
+1. What does this snippet do? Try doing out a few examples with small numbers on
+paper if you’re stuck. (Hint: Think about numbers in binary notation – in base 2.
+How would you express a number as a sum of powers of 2? You may also find it useful
+to note that multiplying by 2n is equivalent to multiplying by 2 n times. You should
+also keep in mind the distributive property of multiplication: a(x + y) = ax + ay.)
+1 // bob and dole are integers
+2 int accumulator = 0;
+3 while ( true )
+4 {
+5 if( dole == 0) break ;
+6 accumulator += (( dole % 2 == 1) ? bob : 0);
+7 dole /= 2;
+8 bob *= 2;
+9 }
+10 cout << accumulator << "\n";
+
+>> It outputs the value of dole * bob.
+
+2. What does this program do? What would the operating system assume about the
+program’s execution?
+1 # define O 1 // That ’s an oh , not a zero
+2 int main ()
+3 {
+4 return O;
+5 }
+
+>> This program returns 1. The OS assume that there was some kind of error.
+
+3. What does this program do?
+1 // N is a nonnegative integer
+2 double acc = 0;
+3 for(int i = 1; i <= N; ++i)
+4 {
+5  double term = (1.0/ i);
+6  acc += term * term ;
+7  for (int j = 1; j < i; ++j)
+8  {
+9   acc *= -1;
+10 }
+11}
+12 cout << acc << "\n";
+
+>> The value of acc will oscilate between 0.125 and -0.125
